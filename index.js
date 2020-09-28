@@ -47,7 +47,7 @@ export default class EventExtender extends BaseModule {
                 break;
             }
             case 'remove': {
-                this._m.emit('reactionAdd', messageReaction, user);
+                this._m.emit('reactionRemove', messageReaction, user);
                 break;
             }
         }
