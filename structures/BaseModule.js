@@ -54,6 +54,6 @@ export default class BaseModule {
      * @param {string} moduleName
      */
     getModule(moduleName) {
-        return this._m.moduleManager.get(moduleName);
+        return this._m.modules.get(moduleName);
     }
 }
