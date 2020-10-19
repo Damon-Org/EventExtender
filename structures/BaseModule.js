@@ -27,7 +27,7 @@ export default class BaseModule {
     }
 
     get servers() {
-        return this._m.serverManager;
+        return this._m.servers;
     }
 
     get users() {
