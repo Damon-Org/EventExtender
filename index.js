@@ -22,7 +22,7 @@ export default class EventExtender extends BaseModule {
                 this._m.off(prop, this._eventReferences[prop]);
     }
 
-    setup() {
+    init() {
         this._m.on('messageReactionAdd', this._eventReferences['add'] = (messageReaction, user) => this._reactionEvent('add', messageReaction, user));
         this._m.on('messageReactionRemove', this._eventReferences['remove'] = (messageReaction, user) => this._reactionEvent('remove', messageReaction, user));
 
