@@ -59,6 +59,8 @@ export default class EventExtender extends BaseModule {
             serverMember = oldState.member || newState.member,
             voiceChannel = oldState.channel || newState.channel;
 
+        if (!guild || !serverMember || !voiceChannel) return;
+
         this._m.emit('voiceUpdate', guild, serverMember, voiceChannel);
 
         if (!this._voiceChannels.has(voiceChannel.id)) this._voiceChannels.set(voiceChannel.id, 0);
